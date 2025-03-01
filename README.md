@@ -1,6 +1,8 @@
 # TB_ORB_SLAM3_ws_ver2
 
-[jnskkmhr](https://github.com/jnskkmhr/orbslam3) 이 분이 만드신 orbslam3를 사용했습니다.
+This project uses [jnskkmhr's ORB-SLAM3](https://github.com/jnskkmhr/orbslam3).
+
+---
 
 ## Installation
 
@@ -22,6 +24,7 @@ sudo apt install libepoxy-dev
 sudo apt install ros-foxy-vision-opencv
 export cv_bridge_DIR=/opt/ros/foxy/share/cv_bridge
 ```
+
 ```
 git clone https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
@@ -31,26 +34,31 @@ make -j$(nproc)
 sudo make install
 export Pangolin_DIR=/usr/local/lib/cmake/Pangolin
 ```
-    if 'Werror' appears,
-    ```
-    sudo apt remove libopenexr-dev
-    sudo apt install libopenexr-dev openexr
-    cd ~/Pangolin
-    sed -i 's/-Werror//' CMakeLists.txt
-    sed -i 's/-Wno-deprecated-register//' CMakeLists.txt
-    sed -i 's/-Wno-null-pointer-subtraction//' CMakeLists.txt
-    sed -i 's/-Wno-null-pointer-arithmetic//' CMakeLists.txt
-    rm -rf build
-    mkdir build && cd build
-    cmake ..
-    make -j$(nproc)
-    sudo make install
-    ```
+
+<details> <summary>🛠 Fix 'Werror' Issues (Click to Expand)</summary>
+```
+sudo apt remove libopenexr-dev
+sudo apt install libopenexr-dev openexr
+cd ~/Pangolin
+sed -i 's/-Werror//' CMakeLists.txt
+sed -i 's/-Wno-deprecated-register//' CMakeLists.txt
+sed -i 's/-Wno-null-pointer-subtraction//' CMakeLists.txt
+sed -i 's/-Wno-null-pointer-arithmetic//' CMakeLists.txt
+rm -rf build
+mkdir build && cd build
+cmake ..
+make -j$(nproc)
+sudo make install
+```
+</details>
+
 ```
 cd ~/TB_ORB_SLAM3_ws_ver2
 chmod +x AutoBuild.sh
 ./AutoBuild.sh
 ```
+
+---
 
 ## Launch Camera
 ```
