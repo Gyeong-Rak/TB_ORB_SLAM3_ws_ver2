@@ -35,7 +35,8 @@ sudo make install
 export Pangolin_DIR=/usr/local/lib/cmake/Pangolin
 ```
 
-<details> <summary>🛠 Fix 'Werror' Issues (Click to Expand)</summary>
+If 'Werror' Issue appears
+```
 sudo apt remove libopenexr-dev
 sudo apt install libopenexr-dev openexr
 cd ~/Pangolin
@@ -48,7 +49,7 @@ mkdir build && cd build
 cmake ..
 make -j$(nproc)
 sudo make install
-</details>
+```
 
 ```
 cd ~/TB_ORB_SLAM3_ws_ver2
