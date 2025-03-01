@@ -7,13 +7,13 @@ def generate_launch_description():
     # Declare arguments
     vocabulary_file_arg = DeclareLaunchArgument(
         'vocabulary_file',
-        default_value='/home/gr/TB_ORB_SLAM3_ws_ver2/src/ORB_SLAM3/Vocabulary/ORBvoc.txt',
+        default_value='/home/gyeongrak/TB_ORB_SLAM3_ws_ver2/src/ORB_SLAM3/Vocabulary/ORBvoc.txt',
         description='Path to the ORB-SLAM3 vocabulary file'
     )
 
     config_file_arg = DeclareLaunchArgument(
         'config_file',
-        default_value='/home/gr/TB_ORB_SLAM3_ws_ver2/src/orbslam3_ros2/config/stereo-inertial/ZED2i.yaml',
+        default_value='/home/gyeongrak/TB_ORB_SLAM3_ws_ver2/src/orbslam3_ros2/config/stereo-inertial/ZED2i.yaml',
         description='Path to the ORB-SLAM3 configuration file'
     )
 
